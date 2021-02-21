@@ -1,0 +1,32 @@
+<h2>Login</h2>
+<div class="container row">
+<div   class="col-md-8">
+<form >
+	<label>Email     :<input type="email"></label><br>
+	<label>Password  :<input type="password"></label><br>
+	<input type="submit" value="Login">
+</form>
+<br><br><br>
+<form >
+	<label>Email     :<input type="email"></label><br>
+	<label>Old Password  :<input type="password"></label><br>
+	<label>New Password  :<input type="password"></label><br>
+	<input type="submit" value="Change Password">
+</form>
+</div>
+
+<div   class="col-md-4">
+<h2>Create New Account</h2>
+<form [formGroup]="userFormGroup" method="POST" >
+	<label>Title     :<input type="text" class="form-control" name="title" formControlName="title"></label><br>
+	<label>FirstName     :</label><input type="text" class="form-control" name="fname" formControlName="fname" > <br>
+	<label>LastName     :<input type="text" class="form-control" name="lname" formControlName="lname"></label><br>
+	<label>Email     :<input type="email" class="form-control" name="email" formControlName="email"></label><br>
+	<label>Phone     :<input type="text" class="form-control" name="phone" formControlName="phone"></label><br>
+	<label>City     :<input type="text" class="form-control" name="city" formControlName="city"></label><br>
+	<label>Country  :<input type="text" class="form-control" name="country" formControlName="country"></label><br>
+	<label>Password     :<input type="password" class="form-control" name="password" formControlName="password"></label><br>
+	<button type="button" (click)="addUser()" >Create Account</button>
+
+</form>
+</div>
